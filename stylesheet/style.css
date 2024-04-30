@@ -5,11 +5,11 @@ body{
 .grid_container{
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 250px 1fr;
 }
 
 .sidebar{
-    background-color: #0ea5e9;
+    background-color: #4f46e5;
     grid-row: 1/-1;
     grid-column: 1/2;
     color: aliceblue;
@@ -22,7 +22,6 @@ body{
 .sidebar>.top_row{
     display: flex;
     flex-direction: row;
-    margin
 }
 
 .sidebar div {
@@ -48,22 +47,57 @@ body{
     margin-bottom: 10px;
 }
 
+.topbar{
+    background-color: #e5e7eb;
+    grid-row:1/2;
+}
+
+.topbar *{
+    height: 48px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .first_row{
     display: flex;
     gap:15px;
     justify-content:space-around;
+    flex:1;
+    align-items: center;
+    height: 65px;
+}
+
+.topbar img{
+    height: 40px;
+}
+
+.profile_pic{
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .first_row>input{
-    border-radius: 15px;
+    border-radius: 25px;
+    margin-left: -200px;
+    width: 1000px;
 }
 
 .second_row{
     display: flex;
     gap:15px;
     justify-content:space-around;
+    flex:1;
+    align-items: center;
+    height: 65px;
 }
 .second_row button{
+    appearance: none;
+    width: 120px;
+    background-color: #4f46e5;
+    color: #e5e7eb;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
     border-radius: 15px;
 }
 
