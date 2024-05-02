@@ -1,20 +1,21 @@
 body{
     height: 100dvh;
+    font-family:'"Poppins", sans-serif;'
 }
 
 .grid_container{
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 250px 1fr;
+    grid-template-rows: 160px 1fr;
 }
 
 .sidebar{
-    background-color: #4f46e5;
+    background-color: #3b82f6;
     grid-row: 1/-1;
     grid-column: 1/2;
     color: aliceblue;
     font-weight: 600;
-    height: 100dvh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -22,6 +23,7 @@ body{
 .sidebar>.top_row{
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
 }
 
 .sidebar div {
@@ -48,59 +50,151 @@ body{
 }
 
 .topbar{
-    background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
     grid-row:1/2;
+    font-weight: 900;
+  font-style: normal;
 }
 
 .topbar *{
-    height: 48px;
-    font-size: 28px;
+    font-size: 1rem;
     font-weight: 600;
 }
 
-.first_row{
+.first_row, .second_row{
     display: flex;
     gap:15px;
-    justify-content:space-around;
+    justify-content:space-between;
     flex:1;
     align-items: center;
-    height: 65px;
+    height: 80px;
 }
 
-.topbar img{
-    height: 40px;
+
+.left, .right{
+    display: flex;
+    
+    align-items: center;
 }
 
-.profile_pic{
+.left{
+    margin-left: 40px;
+    gap: 15px;
+}
+
+.right{
+    margin-right: 40px;
+    gap:35px
+}
+
+img{
+    height: 30px;
+}
+
+img.profile_pic{
     border-radius: 50%;
     overflow: hidden;
+    height: 50px;
 }
 
-.first_row>input{
+.first_row input{
     border-radius: 25px;
-    margin-left: -200px;
-    width: 1000px;
+    width: 400px;
+    appearance: none;
+    background-color: #e2e8f0;
+    border-color: transparent;
 }
 
-.second_row{
+.left, .right{
     display: flex;
-    gap:15px;
-    justify-content:space-around;
-    flex:1;
-    align-items: center;
-    height: 65px;
+}
+
+.second_row .profile_pic{
+    height: 60px;
+}
+.center{
+    line-height: 15px;
 }
 .second_row button{
     appearance: none;
-    width: 120px;
-    background-color: #4f46e5;
-    color: #e5e7eb;
-    font-size: 25px;
+    border: transparent;
+    height: 22px;
+    width: 57px;
+    background-color: #3b82f6;
+    color: white;
+    text-align: center;
     font-weight: 900;
+    font-size: 12px;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 15px;
 }
 
 .main_content{
-    grid-column: 2/-1
+    grid-column: 2/-1;
+    background-color: #e2e8f0;
+}
+
+.main_content .container{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 30px;
+    justify-content: center;
+}
+
+.main_content img{
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.container .left{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.main_content .left .bottom{
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.container .right{
+    grid-column: 2/3;
+    display: flex;/* in this use case of just settting the orientation, using flex is easier */
+    flex-direction: column;
+}
+
+.main_content .right h2{
+    margin-top: 15px;
+}
+.main_content .block{
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+    min-height:250px ;
+    border-left: 10px solid orange; 
+}
+
+ul li{
+    margin-bottom: 15px;
+}
+
+.right .block{
+    width: 250px;
+    margin-bottom: 40px;
+    border:none
+}
+
+.trending li{
+    display: flex;
+    gap: 10px;
+}
+
+.trending img{
+    margin-left: -20px;
+    align-self: center;
 }
