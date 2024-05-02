@@ -157,7 +157,7 @@ img.profile_pic{
 .main_content .left .bottom{
     display: grid;
     gap:20px;
-    grid-template-columns: repeat(autofit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
 
 .container .right{
